@@ -1,0 +1,9 @@
+<a  [routerLink]="index"  routerLinkActive="active" style="cursor: pointer"   class="list-group-item clearfix">
+    <div class="float-left">
+        <h4 class="list-group-item-heading" #hh>{{item.name}}</h4>
+        <p class="list-group-item-text">{{item.description|shorten:2}}</p>
+    </div>
+    <span class="float-right">
+        <img [src]="item.imgUrl" [alt]="item.name" class="rounded-circle img-img-fluid" style="max-height: 50px">
+    </span>
+</a>

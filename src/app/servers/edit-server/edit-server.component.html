@@ -1,0 +1,21 @@
+<h1 *ngIf="!alowed;else templet " >Your Not Alowed To Edit</h1>
+<ng-template #templet>
+    <div class="container"  >
+        <div class="row">
+            <div class="col">
+              <input id="name" name="name" [(ngModel)]="serverName" #name="ngModel">
+            </div>
+          </div>
+          <div class="row">
+              <div class="col">
+                <input id="name" name="name" [(ngModel)]="serverStatus" #name="ngModel">
+              </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                 <button class="btn btn-default" (click)="update()">Update</button>
+                </div>
+              </div>       
+    </div>
+</ng-template>
+

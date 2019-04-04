@@ -1,0 +1,39 @@
+<div class="row" *ngIf="selectedRecip">
+  <div class="col">
+    <img [src]="selectedRecip.imgUrl" [alt]="selectedRecip.name" class="img-fluid">
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    <div ngbDropdown  class="dropdown" *ngIf="selectedRecip" >
+        <button ngbDropdownToggle class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         Manage Recipse
+        </button>
+        <div ngbDropdownMenu   class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" (click)="addtoshoppingList()" style="cursor: pointer" >To Shopping List</a>
+          <a class="dropdown-item" [routerLink]="['/recipes/edit',routerId]" style="cursor: pointer">Edit Recipe</a>
+          <a class="dropdown-item" (click)="deleteRecipe()" style="cursor: pointer">Delete Recipe</a>
+        </div>
+      </div>
+  
+  </div>
+</div>
+<div class="row" *ngIf="selectedRecip" >
+      <div class="col">
+        {{selectedRecip.name}}
+      </div>
+    </div>
+    <div class="row"  *ngIf="selectedRecip">
+          <div class="col">
+          {{selectedRecip.description }}
+          </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <ul class="list-group">
+          <li class="list-group-item"  *ngFor="let item of selectedRecip.ingredient" >
+         {{item.name}}-{{item.amount}}
+          </li>
+        </ul>
+      </div>
+    </div>

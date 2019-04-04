@@ -1,0 +1,72 @@
+<nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light">
+  <div class="container">
+      <a routerLink='/'  style="cursor: pointer;"class="navbar-brand">RecipesBook</a>
+      
+      <button  class="navbar-toggler" type="button" data-toggle="collapse" data-target="navbarcollaps"
+      aria-controls="navbarcollaps"  aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+       </button>
+
+      <div class="collapse navbar-collapse" #navbarcollaps>
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item" ><a routerLinkActive="active"  routerLink="/recipes" (click)="routToApp('Recipse')" class="nav-link">Recipse</a></li>
+            <li class="nav-item"><a routerLinkActive="active" routerLink="/shopping-list" class="nav-link" (click)="routToApp('Shoppinglist')">Shoppinglist</a></li>
+          </ul>
+    
+        <ul  class="navbar-nav ">
+              <li ngbDropdown class="nav-item dropdown ">
+                <a ngbDropdownToggle href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Manag</a>
+                <div ngbDropdownMenu class="dropdown-menu ">
+                  <a href="#" class="dropdown-item">Save Data</a>
+                  <a href="#" class="dropdown-item">Fetch Data</a>
+                </div>
+                </li>
+              
+        </ul>
+   
+      </div>
+  </div>
+   
+
+   
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+      <a class="navbar-brand" href="#">Recipe</a>
+      
+      <button  class="navbar-toggler" type="button" data-toggle="collapse" data-target="navbarcollapss"
+       aria-controls="navbarcollaps"  aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+      <div  class="collapse navbar-collapse">
+       <ul  class="navbar-nav mr-auto">
+         <li class="nav-item"><a href="#" class="nav-link">Recipes</a></li>
+         <li class="nav-item"><a href="#" class="nav-link">Shopping</a></li>
+       </ul>
+       <ul  class="navbar-nav">
+          <li ngbDropdown class="nav-item dropdown"  #navbarcollapss>
+            <a ngbDropdownToggle href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">dropdown</a>
+            <div ngbDropdownMenu class="dropdown-menu">
+              <a href="#" class="dropdown-item">Link1</a>
+              <a href="#" class="dropdown-item">Link1</a>
+              <a href="#" class="dropdown-item">Link1</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+  </div>
+  
+</nav> -->

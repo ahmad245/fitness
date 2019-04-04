@@ -1,0 +1,7 @@
+<p>
+{{user.id}}-{{user.name}}
+
+</p>
+<p>
+    <a [routerLink]="['/users',user.id,user.name]" [queryParams]="{url:user.name}" fragment="loading">AddNEw</a>
+</p>
